@@ -6,7 +6,7 @@ build-backend = "poetry.core.masonry.api"
 [tool.black]
 target-version = ["py311"]
 preview = true
-line-length = 88
+line-length = 79
 
 [tool.ruff]
 # Enable Pyflakes `E` and `F` codes by default.
@@ -157,7 +157,7 @@ unfixable = ["B", "ERA001"]
 exclude = [".git", ".ruff_cache", ".venv", "build", "dist"]
 
 # Same as Black.
-line-length = 88
+line-length = 79
 
 # Allow unused variables when underscore-prefixed.
 dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
