@@ -29,7 +29,7 @@ def part_one() -> None:
 def part_two() -> None:
     with open("./input.txt") as file:
         lines: list[str] = file.readlines()
-        total_cards: dict[int, int] = {idx: 1 for idx in range(len(lines))}
+        total_cards: list[int] = [1] * len(lines)
 
         for idx, line in enumerate(lines):
             _, numbers = line.split(": ")
@@ -49,11 +49,9 @@ def part_two() -> None:
             num_winning_numbers = len(winning_numbers.intersection(numbers))
 
             for i in range(idx + 1, idx + 1 + num_winning_numbers):
-                if i not in total_cards:
-                    total_cards[i] = 1
                 total_cards[i] += total_cards[idx]
 
-        print(sum(total_cards.values()))
+        print(sum(total_cards))
 
 
 if __name__ == "__main__":
