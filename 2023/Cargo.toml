@@ -1,0 +1,10 @@
+[package]
+name = "AdventOfCode2023"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+
+[[bin]]
+name = "1"
+path = "1/solution.rs"
